@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/main.css">
-  <script type="module" src="/styles/scripts.js" defer></script>
+  <script type="module" src="/styles/scripts.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
@@ -22,12 +22,12 @@
       <h2>Message Sent!</h2>
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </div>
-    
+
   </header>
 
   <main>
 
-    <form action="" id="contact-form">
+    <form id="contact-form">
 
       <h1>Contact Us</h1>
 
@@ -46,7 +46,7 @@
       <label for="email">Email Address</label>
       <input type="email" name="email" id="email" required maxlength="50">
 
-      <label for="querytype">Query Type</label>
+      <label for="query">Query Type</label>
       <div class="queries">
         <fieldset id="generalFieldset">
           <input type="radio" name="query" value="general" id="general" required>
@@ -60,7 +60,7 @@
       </div>
 
       <label for="message">Message</label>
-      <textarea type="text" name="message" id="message" required
+      <textarea name="message" id="message" required
         oninvalid="this.setCustomValidity('Go on, leave us a message 😎')" oninput="setCustomValidity('')"></textarea>
 
       <div class="consent">
