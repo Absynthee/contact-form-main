@@ -21,6 +21,7 @@
 
 ::selection {
   color: var(--Green);
+  background-color: var(--LightGreen);
 }
 
 input,
@@ -46,8 +47,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
+  min-height: 800px;
   overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -201,7 +209,8 @@ button {
 }
 
 .messagesent {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 25px;
   width: fit-content;
@@ -231,7 +240,8 @@ button {
 
 @media screen and (max-width: 750px) {
   body {
-    overflow: scroll;
+    overflow: hidden;
+    min-height: 1050px;
   }
 
   main {
@@ -259,4 +269,18 @@ button {
   #message {
     height: 200px;
   }
+
+  @media screen and (max-height: 1050px) {
+    body {
+        overflow: auto;
+        min-height: 1050px;
+      }
+      }
+}
+
+@media screen and (max-height: 815px) {
+    body {
+        overflow: auto;
+    }
+    
 }
