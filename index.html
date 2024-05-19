@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="/styles/scripts.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body>
+  <main>
+
+    <form action="" id="contact-form">
+
+      <h1>Contact Us</h1>
+
+      <div class="names">
+        <div class="firstname">
+          <label for="fname">First Name</label>
+          <input type="text" name="fname" id="fname" tabindex="1" minlength="3" required autofocus>
+        </div>
+
+        <div class="lastname">
+          <label for="lname">Last Name</label>
+          <input type="text" name="lname" id="lname" tabindex="2" required>
+        </div>
+      </div>
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email" tabindex="3" required maxlength="50">
+
+      <label for="querytype">Query Type</label>
+      <div class="queries">
+        <fieldset id="generalFieldset">
+          <input type="radio" name="query" value="general" id="general" tabindex="4" required>
+          <label for="general">General Enquiry</label>
+        </fieldset>
+
+        <fieldset id="supportFieldset">
+          <input type="radio" name="query" value="support" id="support" tabindex="5">
+          <label for="support">Support Request</label>
+        </fieldset>
+      </div>
+
+      <label for="message">Message</label>
+      <textarea type="text" name="message" id="message" tabindex="6" required
+        oninvalid="this.setCustomValidity('Go on, leave us a message 😎')" oninput="setCustomValidity('')"></textarea>
+
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent" tabindex="7" required
+          oninvalid="this.setCustomValidity('Your consent is required')" oninput="setCustomValidity('')">
+        <label for="consent">I consent to being contacted by the team</label>
+      </div>
+
+      <button type="submit" onsubmit="false" tabindex="8" id="submit">
+        <p>Submit</p>
+      </button>
+
+    </form>
+
+  </main>
+
+  <div class="messagesent">
+    <h2>Message Sent!</h2>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+</body>
+
+</html>
